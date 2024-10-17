@@ -79,7 +79,7 @@
 
 # print(list)
 
-#list of numbers 
+#list of numbers 17/10/2024
 list_numbers = [10,40,77,50,7]
 
 for numbers in list_numbers:
@@ -113,3 +113,5 @@ for number in check_odd_even_list:
         print(number,'  is Even Number')    
     else:
         print(number,'  is Odd Number')
+
+
