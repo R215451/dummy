@@ -79,7 +79,7 @@
 
 # print(list)
 
-
+#list of numbers 
 list_numbers = [10,40,77,50,7]
 
 for numbers in list_numbers:
@@ -87,14 +87,14 @@ for numbers in list_numbers:
         print("Moise")
     
 print()
-
+#sorting  the list
 print("Sorting list in ascending order")
 list_numbers.sort()        
 for d in list_numbers:
     print(d)         
 
 
-
+#attendence of list 
 list_student_attendence = ['present','absent']
 
 name_moise = ''
