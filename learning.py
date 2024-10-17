@@ -95,6 +95,7 @@ for d in list_numbers:
 
 
 #attendence of list 
+print('checking attendence of list')
 list_student_attendence = ['present','absent']
 
 name_moise = ''
@@ -103,3 +104,12 @@ for attendence in list_student_attendence:
     if attendence == name_moise:
         print("Moise is present")
    
+
+# find odd even number from a list
+print('finding odd even numbers from a list') 
+check_odd_even_list = [1,44,30,77,50,70,87]
+for number in check_odd_even_list:
+    if number % 2 == 0:
+        print(number,'  is Even Number')    
+    else:
+        print(number,'  is Odd Number')
