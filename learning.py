@@ -86,12 +86,12 @@ for numbers in list_numbers:
     if numbers == 77:
         print("Moise")
     
-print()
-#sorting  the list
-print("Sorting list in ascending order")
-list_numbers.sort()        
-for d in list_numbers:
-    print(d)         
+# pint()
+# #sorting  the list
+# print("Sorting list in ascending order")
+# list_numbers.sort()        
+# for d in list_numbers:
+#     prin        
 
 
 #attendence of list 
@@ -114,4 +114,35 @@ for number in check_odd_even_list:
     else:
         print(number,'  is Odd Number')
 
+method = [10,20,30]
+method.sort()
 
+for number in method:
+ print(number)
+
+# shorting the list
+
+ for d in list_numbers:
+  for d in method:
+   print(d)
+   
+
+list_student_attendence = ['present','absent']
+name_moise = ''
+name_moise = list_student_attendence[0]
+for attendence in list_student_attendence:
+     if attendence == name_moise:
+        print("Moise is present")
+   
+check_odd_even_list = []
+number = int(input('Enter a number'))
+for data in range(number):
+    l = int(input('Enter numbers '))
+    check_odd_even_list.append(l)
+
+
+for number in check_odd_even_list:
+     if number % 2 == 0:
+         print(number,'is Even Number')    
+     else:
+       print(number,'is Odd Number')
