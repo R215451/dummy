@@ -141,10 +141,16 @@ for data in range(number):
     check_odd_even_list.append(l)
 
 
-
+for number in check_odd_even_list:
+     if number % 2 == 0:
+         print(number,'is Even Number')    
+     else:
+       print(number,'is Odd Number')
 
 print()
 print("HOME WORK FOR 11 OCT 2024 *****************************************************************")  
+
+# reverse a name below code is available 
 
 name = 'ahsan'
 reverse = ''
