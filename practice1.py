@@ -151,3 +151,36 @@ for i in range(8):
    num_2 = temp
 
 
+# dictionary problem in python 
+student_record = {
+   'roll_number':75,
+   'name':'abc',
+   'address':{
+      'city':'shivpury',
+      'state':'MP',
+      'pincode':'@a12213'
+   }
+}
+print()
+print(student_record)
+print(student_record['name'])
+print(student_record['address']['city'])
+
+#dictionary in list important concept ************
+list_with_dict = [
+   {
+      'name':'abc',
+      'address':'abc@7ytkhsbjcb'
+   },
+   {
+      'name':'cdy',
+      'address':'cdy@7ytkhsbjcb'
+   }
+]
+
+new_dict = {}
+new_dict['name'] = 'xyz'
+new_dict['address'] = 'xyz@nfqlfeblb'
+
+list_with_dict.append(new_dict)
+print(list_with_dict)
