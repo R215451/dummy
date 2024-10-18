@@ -206,3 +206,16 @@ for number in list_11:
 print('Duplicate list ',dup_remove_list)
 print('Original list ',list_11)
 print(duplicates,'in list')      
+
+# find frequency bu using dict
+list_12 = [10, 55, 4, 60, 77, 89, 90, 77, 54, 77]
+new_frequency_dict = {}
+for item in list_12:
+   if item in new_frequency_dict:
+      new_frequency_dict[item] += 1 
+   else:
+      new_frequency_dict[item] = 1
+
+print(new_frequency_dict)
+for key , value in new_frequency_dict.items():
+         print(f"{key}: {value}")
