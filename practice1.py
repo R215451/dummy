@@ -95,4 +95,30 @@ for i in range(len(list_9)):
          temp = list_9[j+1]
          list_9[j+1] = list_9[j]
          list_9[j] = temp
-print(list_9)         
+print(list_9)
+
+#Armstrong number calculate 
+arms_number = 153
+temp = arms_number
+length___ = 0
+while(temp!=0):
+   length___ = length___+1
+   temp = temp//10
+print(length___)   
+
+#Now I have to calculate armstrong number
+t2 = arms_number
+arm = 0
+while(t2!=0):
+   multi = 1
+   rem = t2 % 10
+   for i in range(length___):
+      multi = multi * rem
+   arm = arm+multi
+   t2 = t2//10  
+
+if arms_number == arm:
+ print(arm,"is armstrong number:")
+else:
+   print(arm,"is not armstrong number")#this is armstrong number 
+
