@@ -122,3 +122,32 @@ if arms_number == arm:
 else:
    print(arm,"is not armstrong number")#this is armstrong number 
 
+#**************************prime number concept in python with infinite loop 
+while True:
+    try:
+        user_number = int(input('Enter a number as your wish: '))
+        break  # Exit the loop if input is valid
+    except ValueError:
+        print("That's not a valid number. Please try again.")
+
+print(user_number)
+t3 = 0
+for i in range(2,user_number):
+   if user_number % i == 0:
+      t3 = t3+1
+if t3>0:
+   print('Not Prime Number')
+else:
+   print('Prime Number')
+
+# Fabonnaci series  of first 10 numbers in python 
+num_1 = 0 
+num_2 = 1
+print(num_1,num_2,end=' ')
+for i in range(8):
+   temp = num_1+num_2
+   print(temp,end=' ')
+   num_1 = num_2
+   num_2 = temp
+
+
