@@ -184,3 +184,25 @@ new_dict['address'] = 'xyz@nfqlfeblb'
 
 list_with_dict.append(new_dict)
 print(list_with_dict)
+
+print("=================******************************")
+# copy list into another list 
+list_10 = [10,20,30,4,77,5,56,57]
+new_list_10 = []
+for i in list_10:
+   new_list_10.append(i)
+print(new_list_10)
+
+# Duplicate element occurences
+list_11 = [10, 55, 4, 60, 77, 89, 90, 77, 54, 77]
+dup_remove_list = []
+duplicates = 0
+for number in list_11:
+   if number not in dup_remove_list:
+      dup_remove_list.append(number)
+   else:   
+      duplicates = duplicates+1
+      
+print('Duplicate list ',dup_remove_list)
+print('Original list ',list_11)
+print(duplicates,'in list')      
