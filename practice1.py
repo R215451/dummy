@@ -54,3 +54,45 @@ while(temp!=0):
  temp = temp//10
 
 print(reverse)
+
+print("==================================================")
+
+list_8 =  [10, 55, 4, 60, 77, 89, 90, 77, 54, 77]
+list_8.sort()
+#smallest element in a list 
+print(list_8[0])
+#Largest element in a list 
+len2 = len(list_8)
+result = list_8[len2-1]
+print(result)
+
+# swap 2 numbers in python 
+number1 = 10
+number2 = 20
+temp = 0
+print(number1,number2)
+temp = number2
+number2 = number1
+number1 = temp
+
+print(number1,number2)
+
+print("*******************************")
+number3 = 2
+number4 = 3
+print(number3,number4)
+number3 = number3+number4
+number4 = number3-number4
+number3 = number3-number4
+
+print(number3,number4)
+
+#bubble sort concept in python
+list_9 = [10, 55, 4, 60, 77, 89, 90, 77, 54, 77]
+for i in range(len(list_9)):
+   for j in range(len(list_9)-1):
+      if list_9[j]>list_9[j+1]:
+         temp = list_9[j+1]
+         list_9[j+1] = list_9[j]
+         list_9[j] = temp
+print(list_9)         
