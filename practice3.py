@@ -20,3 +20,12 @@ for item_char in name_3:
 print(name_3)
 print(name_3_3)    
 
+#find the duplicate words in a string
+name_4  = "ABC BCD ABC"
+empty_list = []
+list_name = name_4.split()
+for i in list_name:
+    if i not in empty_list:
+        empty_list.append(i)
+print(' '.join(empty_list))        
+
