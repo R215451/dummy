@@ -78,4 +78,34 @@ sqrt = number_2 ** 0.5
 if int(sqrt) ** 2 == number_2: 
  print('Perfact square') 
 else:
-    print('Not perfact square')           
+    print('Not perfact square')
+
+
+ # Print odd numbers from 1 to 100
+for i in range(1,101):
+  if i % 2 == 0:
+      print(f"{i} is even number")
+# Sum of Natural numbers in python       
+sum=0
+for i in range(1,101):
+    sum = sum+i      
+print(sum)
+
+# Odd and Even numbers printing from a list
+list_13 = [10,4,7,87,856,77]
+for data in list_13:
+    if data % 2 == 0:
+        print(f'Even number {data}')
+for data in list_13:
+    if data % 2 != 0:
+        print(f'Odd number {data}')
+
+#Gcd 50,60 or HCF and LCM of given two numbers 
+num1= 50
+num2 = 60 
+finalAnswer = 0
+for i in range(1,num1+1):
+  if num1 % i == 0 and num2 % i == 0:
+      finalAnswer = i
+print(f"HCF is {finalAnswer}")      
+print(f"LCM is {(num1*num2)/finalAnswer}")
