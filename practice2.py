@@ -1,4 +1,5 @@
 from num2words import num2words
+import math
 # name reverse by using words like name = "abc 123", ->>>>>>>> "123 abc"
 name = "abc 123"
 new_list = name.split()
@@ -44,3 +45,37 @@ print_prime_number(50)
 # Final result printing 
 for data in range(0,len(list_empty_prime),2):
     print(list_empty_prime[data])            
+
+# Find square root of a number without using sqrt() method
+number = 16
+guess = number/2.0
+
+while True:
+    new_guess = (guess+number/guess)/2.0
+    if abs(new_guess-guess)<1e-10:
+        break
+
+    guess = new_guess
+
+print(guess)    
+
+#Direct Method to find out square root of a number
+print(math.sqrt(number))
+
+
+#Positive ,negative and neutral number in python 
+number_1 = int(input('Enter a number'))
+if number_1<0:
+    print('Negative Number')
+elif number_1==0:
+    print('Neutral')
+else:
+    print('Positive Number') 
+
+# Perfact square of a number 
+number_2 = 27
+sqrt = number_2 ** 0.5
+if int(sqrt) ** 2 == number_2: 
+ print('Perfact square') 
+else:
+    print('Not perfact square')           
