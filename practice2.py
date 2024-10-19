@@ -1,4 +1,5 @@
 from num2words import num2words
+from itertools import permutations
 import math,string
 # name reverse by using words like name = "abc 123", ->>>>>>>> "123 abc"
 name = "abc 123"
@@ -148,4 +149,25 @@ for item_char in vowel_consonant:
 print(f"total vowels are {count_vowels}")
 print(f"total consonants are {count_consonant}") 
 print(f"total specials are {count_special}")
-print(f"total numbers are {count_number}")        
+print(f"total numbers are {count_number}")
+
+# Anagrams of two strings 
+str1 = input('Enter a string 1 ')
+str2 = input('Enter a string 2 ')
+
+str1 = str1.replace(' ','').lower()
+str2 = str2.replace(' ','').lower()
+
+if sorted(str1) == sorted(str2):
+    print('Anagrams')
+else:
+    print('Not Anagrams')
+
+# Possible number of permutations from a string 
+permutations_string = "abc"
+list_per = permutations(permutations_string)
+per = 0    
+for i in list_per:
+    per = per+1
+    print(' '.join(i))
+print(f"Number of permutations are {per}")    
