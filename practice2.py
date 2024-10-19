@@ -1,5 +1,5 @@
 from num2words import num2words
-import math
+import math,string
 # name reverse by using words like name = "abc 123", ->>>>>>>> "123 abc"
 name = "abc 123"
 new_list = name.split()
@@ -109,3 +109,43 @@ for i in range(1,num1+1):
       finalAnswer = i
 print(f"HCF is {finalAnswer}")      
 print(f"LCM is {(num1*num2)/finalAnswer}")
+
+# Find total number of characters from a string
+my_new_name = 'abcdef'
+print(f"Length is {len(my_new_name)}")
+
+l = 0
+#OR
+for i in my_new_name:
+   l = l+1
+print(l)
+
+# Punctuations problem
+count_punctuations = 0
+my_new_punctuations_proble = 'moin@123&^%$#'
+for item in my_new_punctuations_proble:
+    if item in string.punctuation:
+         count_punctuations = count_punctuations+1
+
+print(f"Total number of puntuantions in this string {count_punctuations}")
+
+# Vowels and Consonant 
+vowel_consonant = "moin@123&^%$#"
+count_vowels = 0
+count_consonant = 0
+count_special = 0
+count_number = 0
+for item_char in vowel_consonant:
+    if item_char == 'a' or item_char == 'e' or item_char == 'i' or item_char == 'o' or item_char == 'u':
+        count_vowels = count_vowels +1 
+    elif item_char in string.punctuation:
+        count_special = count_special+1
+    elif item_char == '1' or item_char == '2' or item_char == '3' or item_char == '4' or item_char == '5' or item_char == '6' or item_char == '7' or item_char == '8' or item_char == '9' or item_char == '0': 
+        count_number = count_number+1
+    else:
+        count_consonant = count_consonant +1    
+
+print(f"total vowels are {count_vowels}")
+print(f"total consonants are {count_consonant}") 
+print(f"total specials are {count_special}")
+print(f"total numbers are {count_number}")        
