@@ -207,7 +207,7 @@ print('Duplicate list ',dup_remove_list)
 print('Original list ',list_11)
 print(duplicates,'in list')      
 
-# find frequency bu using dict
+# find frequency by using dict
 list_12 = [10, 55, 4, 60, 77, 89, 90, 77, 54, 77]
 new_frequency_dict = {}
 for item in list_12:
