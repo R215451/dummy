@@ -1,3 +1,4 @@
+from collections import Counter
 # # remove all white spaces from given string 
 # name = "abc cde cdfscgcbhs "
 # print(name.replace(' ',''))
@@ -150,8 +151,34 @@ def cal_permutations(name):
     return permutaions_list      
           
     
-
+# Calling function below , name is cal_permutations  
 name = "abc"
 result = cal_permutations(name) # type: ignore
 print(result)
+
+
+name_1  = "abc"
+name_2  = "bca"
+if len(name_1) == len(name_2):
+ name_1 = name_1+name_1
+ if name_2 in name_1:
+    print('Rotation')
+ else:
+    print('Not Rotation')
+   
+
+#find maximum and minimum occurring character in a string.
+name_freq_counter = "Asansol engineering college"
+freq = Counter(name_freq_counter)
+max_char = max(freq,key=freq.get)
+max_count = freq[max_char]
+
+min_char = min(freq, key=freq.get)
+min_count = freq[min_char]
+
+print(freq)
+print(max_count)
+print(min_count)
+
+
 
