@@ -181,4 +181,22 @@ print(max_count)
 print(min_count)
 
 
+count_frequency_of_characters = 'Asansol engineering college'.lower()
+empty_dict = {}
+for i in count_frequency_of_characters:
+   if i in empty_dict:
+      empty_dict[i] += 1
+   else:
+      empty_dict[i] = 1
+
+print(empty_dict)
+print(max(empty_dict,key = empty_dict.get))
+print("Maxi",empty_dict[max(empty_dict,key = empty_dict.get)])     
+
+
+print(min(empty_dict,key = empty_dict.get))
+print("Mini",empty_dict[min(empty_dict,key = empty_dict.get)])     
+
+
+
 
