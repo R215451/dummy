@@ -133,7 +133,8 @@
 
 
 
-
+# find permutations of a string 
+# 23 oct 2024
 def cal_permutations(name):
     if len(name) < 0 or len(name) == 0:
      return []
