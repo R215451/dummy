@@ -61,42 +61,96 @@
 # print(sum_of_list_numbers)
 
 # divide string in n equal parts 
-divide_string = "abcdefghijk"
-number_of_division = 3
-l1 = len(divide_string)
-part_length = l1 // number_of_division
-remender = l1 % number_of_division
+# divide_string = "abcdefghijk"
+# number_of_division = 3
+# l1 = len(divide_string)
+# part_length = l1 // number_of_division
+# remender = l1 % number_of_division
 
-parts = []
-start = 0
-for i in range(number_of_division):
-    end = start + part_length + (1 if remender > 0 else 0)
-    parts.append(divide_string[start:end])
-    start = end
-    remender = remender -1 
+# parts = []
+# start = 0
+# for i in range(number_of_division):
+#     end = start + part_length + (1 if remender > 0 else 0)
+#     parts.append(divide_string[start:end])
+#     start = end
+#     remender = remender -1 
 
-print(parts) 
+# print(parts) 
 
 
-# Define two sets
-set_a = {1, 2, 3}
-set_b = {1, 2, 3, 4, 5}
+# name = input('Enter your name ')
+# divide = int(input('Enter a number in which you want to divide string'))
+# l1 = len(name)
+# char_in_one_string = l1 // divide
+# rem_in_string = l1 % divide
 
-# Check if set_a is a subset of set_b
-is_subset = set_a.issubset(set_b)
+# list_parts = []
+# start = 0 
+# for i in range(divide):
+#   end = start + char_in_one_string + (1 if rem_in_string > 0 else 0)
+#   list_parts.append(name[start:end])
+#   start = end
+#   rem_in_string = rem_in_string -1
+# print(list_parts)  
 
-print(is_subset)
+# # Define two sets
+# set_a = {1, 2, 3}
+# set_b = {1, 2, 3, 4, 5}
 
-string = "abc"
-subsets = [""]
-for char in string:
-  new_subsets = []
-  for subset in subsets:
-     new_subset = subset+char
-     new_subsets.append(new_subset)
+# # Check if set_a is a subset of set_b
+# is_subset = set_a.issubset(set_b)
 
-  subsets  = subsets+new_subsets 
+# print(is_subset)
 
-print(subsets) 
+
+# All subset of a string 
+# string = "abc"
+# subsets = [""]
+# for char in string:
+#   new_subsets = []   
+#   for subset in subsets:
+#      new_subset = subset+char
+#      new_subsets.append(new_subset) #a ab 
+
+#   subsets  = subsets+new_subsets    #a aab 
+
+# print(subsets) 
+
+
+
+
+
+# subset_string = "abc" # for loop for this 
+# subsets = [""]  # for loop for this 
+
+# for char in subset_string:
+#     list_sub = []
+#     for sub in subsets:
+#         list_sub.append(sub+char)
+#     subsets = subsets + list_sub    
  
+# print(subsets)
+
+
+
+
+def cal_permutations(name):
+    if len(name) < 0 or len(name) == 0:
+     return []
+    if len(name) == 1:
+       return [name]
+    
+    permutaions_list = []
+    for i in range(len(name)):
+       current_char = name[i]
+       remaining_string = name[:i] + name[i+1:]
+       for perm in cal_permutations(remaining_string):
+          permutaions_list.append(current_char+perm)
+    return permutaions_list      
+          
+    
+
+name = "abc"
+result = cal_permutations(name) # type: ignore
+print(result)
 

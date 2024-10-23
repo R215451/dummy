@@ -80,7 +80,23 @@ import itertools
 # result = string_permutations(input_string)
 # print(result)
 
-input_string = input('Enter your name ')
-perms = itertools.permutations(input_string)
-result =  [''.join(p) for p in set(perms)]
-print(result)
+# input_string = input('Enter your name ')
+# perms = itertools.permutations(input_string)
+# result =  [''.join(p) for p in set(perms)]
+# print(result)
+
+
+name = input('Enter your name ')
+divide = int(input('Enter a number in which you want to divide string'))
+l1 = len(name)
+char_in_one_string = l1 // divide
+rem_in_string = l1 % divide
+
+list_parts = []
+start = 0 
+for i in range(divide):
+  end = start + char_in_one_string + (1 if rem_in_string > 0 else 0)
+  list_parts.append(name[start:end])
+  start = end
+  rem_in_string = rem_in_string -1
+print(list_parts)   
