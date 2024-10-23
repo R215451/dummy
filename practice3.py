@@ -180,7 +180,8 @@ print(freq)
 print(max_count)
 print(min_count)
 
-
+# Second approach to solve above problem 
+#find maximum and minimum occurring character in a string.
 count_frequency_of_characters = 'Asansol engineering college'.lower()
 empty_dict = {}
 for i in count_frequency_of_characters:
