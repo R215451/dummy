@@ -27,7 +27,23 @@ for item in res_list:
    print(max(res_list,key=len))           
     
     
+# List elements rotate left side  as well as right side with 1 position 
+list_of_numbers = [1,2,3,4]
+# number = int(input('Enter a number , from you want to shift the elements'))
+# # [2,3,4,1]
+# left_side_rotation = list_of_numbers[number:]+list_of_numbers[:number]
+# #[4 1 2 3]
+# right_side_rotation = list_of_numbers[-number:]+list_of_numbers[:-number]
+# print(left_side_rotation)
+# print(right_side_rotation)
 
+
+empty_list_7 = []
+
+for i in range(1,len(list_of_numbers)):
+   empty_list_7[i] = list_of_numbers[i]
+print(empty_list_7)   
+      
 
 
 
