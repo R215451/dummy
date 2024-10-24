@@ -85,18 +85,105 @@ import itertools
 # result =  [''.join(p) for p in set(perms)]
 # print(result)
 
+#Left side rotation 
+# empty_list = []
+# list_of_numbers = [1,2,3,4] # [2 3 4 1]
+# for i in range(1,len(list_of_numbers)):
+#     empty_list.append(list_of_numbers[i])
 
-name = input('Enter your name ')
-divide = int(input('Enter a number in which you want to divide string'))
-l1 = len(name)
-char_in_one_string = l1 // divide
-rem_in_string = l1 % divide
 
-list_parts = []
-start = 0 
+# empty_list.append(list_of_numbers[0])
+
+
+#Right side rotation
+#[4 1 2 3]
+
+# empty_list.append(list_of_numbers[-1])
+# for i in range(0,len(list_of_numbers)-1):
+#     empty_list.append(list_of_numbers[i])
+# print(empty_list)    
+
+
+print('Assignment for 25 OCT 2024 STARTING FROM HERE')
+print('Question 1 Find one string is rotation of another string')
+name_1 = 'abcdef'
+name_2 = 'defabc'
+
+name_1 = name_1+name_1
+if name_2 in name_1:
+    print('Rotation')
+else:
+    print('No Rotation') 
+
+print('Question 2 Divide string in n equal parts')
+
+name_3 = 'abcde'
+divide = 2 
+number_parts = len(name_3) // divide    
+rem = len(name_3) % divide    
+
+
+list_new = []
+start=0
 for i in range(divide):
-  end = start + char_in_one_string + (1 if rem_in_string > 0 else 0)
-  list_parts.append(name[start:end])
+  end = start + number_parts +  (1 if rem > 0 else 0)
+  list_new.append(name_3[start:end])
   start = end
-  rem_in_string = rem_in_string -1
-print(list_parts)   
+  rem-=1
+print(list_new)  
+
+
+print('Question 3 Find subset of a string')
+name_4 = 'abc'
+subset = ['']
+for char in name_4:
+   subset_list = []
+   for item in subset:
+      subset_list.append(item+char)
+   subset = subset + subset_list 
+print(subset)     
+
+print('Question 4 Find permutations of a string')
+#creating a function 
+def calc_perm(name):
+   if len(name) == 0:
+      return []
+   if len(name) ==1:
+      return [name]
+    
+   new_list_for_permutations = []
+   for i in range(len(name)):
+      current_char = name[i]
+      remaining_string_chars = name[:i]+name[i+1:]
+      for item in calc_perm(remaining_string_chars):
+         new_list_for_permutations.append(item+current_char)
+   return new_list_for_permutations
+
+# Now calls to function above
+print(calc_perm('abc'))
+
+print('Question 5 Max and Min sequence of character')
+
+name_of_college = 'Asansol Engineering College'.lower()
+item_smaple_dict = {}
+for item in name_of_college:
+   if item in item_smaple_dict:
+    item_smaple_dict[item] += 1 
+   else:
+      item_smaple_dict[item] = 1
+print(item_smaple_dict)  
+print(item_smaple_dict[max(item_smaple_dict,key=item_smaple_dict.get)])  
+print(item_smaple_dict[min(item_smaple_dict,key=item_smaple_dict.get)])    
+
+
+print('Question 6 Left side rotation of a list elements with 1 position')
+list_left_side_rotation = [1,2,3,4] # [2 3 4 1]
+print(list_left_side_rotation[1:] + list_left_side_rotation[:1])      
+    
+print('Question 7 Right side rotation of a list elements with 1 position')
+list_right_side_rotation = [1,2,3,4] # output [4,1,2,3]
+print(list_right_side_rotation[-1:]+list_right_side_rotation[:-1])
+
+
+
+ 
