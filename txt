@@ -1,0 +1,25 @@
+Python:
+
+Source Code → Bytecode → Interpreter (Executes bytecode line-by-line) slower
+
+
+Java:
+
+Source Code → Bytecode → JVM with JIT Compiler (Compiles bytecode to machine code) faster
+
+Python (and many other programming languages), == is used to compare the values of two variables or expressions to check if they are equal.
+
+In Python, the is keyword is used to compare the references or identities of two objects, rather than their values.
+
+Built-in Namespace: Contains names that are built into Python, such as functions like print() and len(). This namespace is available in any Python environment.
+
+List comprehensions in Python are a concise way to create lists. 
+numbers = [x for x in range(10) if x % 2 == 0]
+print(numbers)  # Output: [0, 2, 4, 6, 8]
+
+args means positional argument while kwargs means key = 10 like this 
+
+metaclass defines how a class behaves , A class is an instance of metaclass  
+type is a python metaclass  
+
+multiple threads are trying to access python code to a  single resources at a time GIL(Global interpreter lock)
