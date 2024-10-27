@@ -185,5 +185,69 @@ list_right_side_rotation = [1,2,3,4] # output [4,1,2,3]
 print(list_right_side_rotation[-1:]+list_right_side_rotation[:-1])
 
 
+# Python dict as well as list 
+student = {
+
+
+   'name':'abc',
+   'address':'123 abc',
+   'phone_number':'+91 1234567',
+   'roll_number': 777,
+
+   'game':{
+      'first_game':'Cricket',
+      'second_game':'Football'
+   }
+
+}
+
+
+
+student['favourite_color'] = 'Blue'
+student['favourite_subject'] = 'Maths'
+student['game']['third_game'] = 'Hocky'
+print(student)
+
+# Find a element of a list [1, 2, 3, 4, 5]
+def find_middle_element(mlist):
+ if len(mlist) == 0:
+    return None
+ elif  len(mlist) % 2 == 1:
+    return mlist[len(mlist) // 2]
+ else:
+    return  mlist[len(mlist) // 2 - 1 : len(mlist) // 2 + 1]
+ 
+
+
+#middle_list = [1, 2, 3, 4, 5]
+emp_list = []
+number_user = int(input('Enter a size of a list'))
+for i in range(number_user):
+   l = int(input('Enter number '))
+   emp_list.append(l)
+   
+
+res = find_middle_element(emp_list)
+print(res)
+
+
+# Star patterns in python 
+print('+++++++++++++++++++++++++++++++++')
+for i in range(5):
+   for j in range(5):
+      if j<=i:
+         print('*',end=' ')
+      else:
+         print(' ',end=' ')
+   print()      
+
+
+
+
+
+
+
+
+
 
  
