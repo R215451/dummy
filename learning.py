@@ -158,3 +158,8 @@ for i in name:
    reverse =  i+reverse
 
 print(reverse)   
+
+
+
+
+# java android kotlin jetpack html css javascript python django api 

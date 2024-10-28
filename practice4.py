@@ -38,11 +38,11 @@ list_of_numbers = [1,2,3,4]
 # print(right_side_rotation)
 
 
-empty_list_7 = []
+# empty_list_7 = []
 
-for i in range(1,len(list_of_numbers)):
-   empty_list_7[i] = list_of_numbers[i]
-print(empty_list_7)   
+# for i in range(1,len(list_of_numbers)):
+#    empty_list_7[i] = list_of_numbers[i]
+# print(empty_list_7)   
       
 
 

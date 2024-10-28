@@ -186,8 +186,8 @@ for i in range(1,8):
          print(' ',end=' ')
    print()      
 
-new_list = [10,20,[10,30]]
-shallow_copy = copy.copy(new_list)
-print(shallow_copy)
-shallow_copy[2][0] = 77
-print(new_list)
+# new_list = [10,20,[10,30]]
+# shallow_copy = copy.copy(new_list)
+# print(shallow_copy)
+# shallow_copy[2][0] = 77
+# print(new_list)
